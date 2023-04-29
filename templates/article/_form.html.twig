@@ -1,0 +1,14 @@
+{% form_theme form 'form/fields.html.twig' %}
+{{ form_start(form) }}
+{{ form_widget(form.title) }}
+{{ form_widget(form.content) }}
+<button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
+
+{% block javascript_inline %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            CKEDITOR.replace('article_content');
+        });
+    </script>
+{% endblock %}

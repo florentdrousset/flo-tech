@@ -6,6 +6,14 @@
  */
 
 import './styles/app.scss';
+import 'highlight.js/styles/default.css';
+import hljs from 'highlight.js';
 
 // start the Stimulus application
 import './bootstrap';
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('pre code').forEach((block) => {
+        hljs.highlightElement(block);
+    });
+});
