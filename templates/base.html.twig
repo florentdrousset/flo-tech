@@ -17,7 +17,7 @@
     <!-- Bulma Navbar -->
     <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="#">
+            <a class="navbar-item" href="{{ path('app_home_home') }}">
                 <strong>Florent Drousset</strong>
             </a>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -28,14 +28,11 @@
         </div>
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="#">
+                <a class="navbar-item" href="{{ path('app_home_home') }}">
                     Home
                 </a>
-                <a class="navbar-item" href="#">
+                <a class="navbar-item" href="{{ path('app_article_index') }}">
                     Articles
-                </a>
-                <a class="navbar-item" href="#">
-                    Contact
                 </a>
             </div>
         </div>
