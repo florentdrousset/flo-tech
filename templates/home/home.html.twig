@@ -9,11 +9,18 @@
                 Hi, I'm Florent Drousset
             </h1>
 
-            <div class="">
+            <div class="welcome-box">
                 <p class="content">Welcome to my blog ! </p>
-                <p class="content">I'm a web developer specialized in PHP.</p>
-                <p class="content">Feel free to check my <a class="ml-1 cool-link" href="{{ path('app_article_index') }}">articles</a>.</p>
+                <p class="content">I'm a web developer specialized in PHP. This website is still a work in progress so please come back later.</p>
+                <p class="content">In the meantime, feel free to check my <a class="ml-1 cool-link" href="{{ path('app_article_index') }}">articles</a>.</p>
             </div>
+
+            <h2>Latest posts</h2>
+            <section class="posts-list">
+                {% for article in articles %}
+                    <a href="{{ path('app_article_index', {'id': article.id }) }}" class="article-row"><span class="hp-article-title">{{ article.title }}</span><time>{{ article.date|date('d-m-Y') }}</time></a>
+                {% endfor %}
+            </section>
     </div>
 
 {% endblock %}
