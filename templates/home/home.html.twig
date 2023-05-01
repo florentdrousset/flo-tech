@@ -3,34 +3,17 @@
 {% block title %}Florent Drousset{% endblock %}
 
 {% block body %}
-    <div class="block p-3">
-        <h1 class="title block m-2">
-            Florent Drousset
-        </h1>
+    <div class="main-container m-auto">
+            <div class=""></div>
+            <h1 class="main-title columns is-centered container m-3">
+                Hi, I'm Florent Drousset
+            </h1>
 
-        <p class="subtitle block m-2">
-            Welcome to my blog. Feel free to check my <a href="#">articles</a>.
-        </p>
-
-        <div class="field">
-            <div class="control">
-                <input class="input" type="text" placeholder="Input">
+            <div class="">
+                <p class="content">Welcome to my blog ! </p>
+                <p class="content">I'm a web developer specialized in PHP.</p>
+                <p class="content">Feel free to check my <a class="ml-1 cool-link" href="{{ path('app_article_index') }}">articles</a>.</p>
             </div>
-        </div>
-
-        <div class="field">
-            <p class="control">
-              <span class="select">
-                <select>
-                  <option>Select dropdown</option>
-                </select>
-              </span>
-            </p>
-        </div>
-
-        <div class="buttons">
-            <a class="button is-primary">Primary</a>
-            <a class="button is-link">Link</a>
-        </div>
     </div>
+
 {% endblock %}

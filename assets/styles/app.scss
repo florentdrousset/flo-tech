@@ -1,38 +1,41 @@
 @charset "utf-8";
 
 // Import a Google Font
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
-
-// Set your brand colors
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat:wght@500&family=Open+Sans&family=Roboto:wght@300;400;500;900&display=swap');
 $purple: #8A4D76;
 $pink: #FA7C91;
-$brown: #757763;
+$brown: #212427;
 $beige-light: #D0D1CD;
 $beige-lighter: #EFF0EB;
 $soft-blue: #0074E1;
 $softest-blue: #F2F2F2;
 // Update Bulma's global variables
-$family-sans-serif: "Nunito", sans-serif;
+$family-sans-serif: "Roboto", sans-serif;
 $grey-dark: $brown;
 $grey-light: $beige-light;
 $primary: $soft-blue;
 $link: $pink;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
+$text-main-color: #2c2c2c;
 
 // Update some of Bulma's component variables
-$body-background-color: $softest-blue;
+//$body-background-color: $softest-blue;
+$body-background-color: #eeeeee;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
-
-// Import Bulma
-@import "~bulma/bulma.sass";
 
 pre {
   background-color: #f5f5f5;
   padding: 1em;
   overflow-x: auto;
+}
+
+body {
+  background-color: #eee;
+  color: $text-main-color;
+  font-family: "Montserrat";
 }
 
 pre code {
@@ -41,3 +44,53 @@ pre code {
   color: #333;
 }
 
+.main-title {
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.main-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  max-width: 60%;
+  padding: 0 1rem;
+}
+
+nav {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  justify-content: space-around;
+}
+
+.navbar-flo {
+  font-size:1.3rem;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+a {
+  text-decoration: none;
+  color: $text-main-color;
+}
+
+.navbar-item {
+  margin-right: 1.5rem;
+}
+
+.emoji {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.cool-link {
+  color: #5143F1;
+  text-decoration: underline;
+}

@@ -13,4 +13,4 @@ public function home(Request $request): \Symfony\Component\HttpFoundation\Respon
     {
         return $this->render('home/home.html.twig', [
         ]);    }
-}
+    }

@@ -17,14 +17,10 @@ class ArticleType extends AbstractType
             ->add('content', CKEditorType::class, [
                 'config' => [
                     'toolbar' => 'full',
-                    'required' => true,
-                    'extraPlugins' => 'codesnippet',
-                    'codeSnippet_theme' => 'default', // Or any other theme you prefer
                 ]
             ])
-            ->add('date')
-            ->add('author')
 
+            ->add('date')
         ;
     }
 

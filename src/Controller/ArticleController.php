@@ -27,8 +27,7 @@ class ArticleController extends AbstractController
     public function new(Request $request, ArticleRepository $articleRepository): Response
     {
         $article = new Article();
-        $form = $this->createForm(ArticleType::class, $article);
-        $form->handleRequest($request);
+        $form = $this->createForm(ArticleType::class, $article); $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $articleRepository->save($article, true);

@@ -3,27 +3,25 @@
 {% block title %}Article{% endblock %}
 
 {% block body %}
-    <div class="section">
-        <div class="container">
-            <h1 class="title">{{ article.title }}</h1>
-            <div class="box">
-                <div class="content">
-                    <div>{{ article.content|raw }}</div>
-                </div>
-                <div class="content">
-                    <h3 class="subtitle">Date</h3>
-                    <p>{{ article.date ? article.date|date('Y-m-d H:i:s') : '' }}</p>
-                </div>
-            </div>
-            <div class="buttons">
-                <a href="{{ path('app_article_index') }}" class="button is-info">Back to list</a>
-                <a href="{{ path('app_article_edit', {'id': article.id}) }}" class="button is-warning">Edit</a>
-                <form action="{{ path('app_article_delete', {'id': article.id}) }}" method="post" onsubmit="return confirm('Are you sure you want to delete this article?');" style="display: inline;">
-                    <input type="hidden" name="_method" value="DELETE">
-                    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ article.id) }}">
-                    <button class="button is-danger" type="submit">Delete</button>
-                </form>
-            </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+
+    <div class="main-container m-auto">
+        <div class=""></div>
+        <h1 class="main-title columns is-centered container m-3">
+            {{ article.title }}
+        </h1>
+
+        <div class="content">
+            {{ article.content|raw }}
         </div>
     </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('pre code.php-code').forEach((block) => {
+            hljs.highlightElement(block);
+        });
+    });
+</script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
 {% endblock %}

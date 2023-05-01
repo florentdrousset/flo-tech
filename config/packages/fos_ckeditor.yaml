@@ -5,12 +5,5 @@ twig:
         - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
 
 fos_ck_editor:
-    configs:
-        default:
-            toolbar: 'full'
-            extraPlugins: 'codesnippet'
-            codeSnippet_theme: 'default'
-    plugins:
-        codesnippet:
-            path: 'bundles/fosckeditor/plugins/codesnippet/'
-            filename: 'plugin.js'
+    base_path: 'public/ckeditor'
+    js_path: 'ckeditor.js'
